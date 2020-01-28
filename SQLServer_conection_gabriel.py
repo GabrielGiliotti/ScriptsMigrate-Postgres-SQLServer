@@ -2,6 +2,8 @@ import pyodbc
 
 
 def connection_SQL(driver, server, database, userid, senha, str_query, fetch):
+    if database == "":
+        database = " "
 
     connection = "Driver={};SERVER={};DATABASE={};UID={};PWD={};".format(driver, server, database, userid, senha)
 
